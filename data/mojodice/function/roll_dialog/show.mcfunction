@@ -1,13 +1,2 @@
-dialog show @s {\
-  "type": "minecraft:notice",\
-  "title": "Hello World!",\
-  "pause": false,\
-  "after_action": "none",\
-  "action": {\
-    "label": "OK",\
-    "action": {\
-      "type": "run_command",\
-      "command": "trigger mojodice.event set 2"\
-    }\
-  }\
-}
+function mojodice:roll_dialog/viewmodel
+function mojodice:roll_dialog/view with storage mojodice:roll_dialog ViewModel
