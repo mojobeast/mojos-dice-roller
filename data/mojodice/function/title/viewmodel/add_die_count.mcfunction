@@ -1,0 +1,1 @@
+$data modify storage mojodice:title ViewModel.roll_results append value {"text": "$(count)d$(die_size)", "color": "dark_aqua"}

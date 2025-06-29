@@ -1,5 +1,14 @@
 scoreboard objectives add dice_bag trigger
 scoreboard objectives add mojodice.event trigger
-scoreboard objectives add mojodice.event.roll_die trigger
+scoreboard objectives add mojodice.event.add_die trigger
 scoreboard objectives add mojodice.roll_result dummy
+scoreboard objectives add mojodice.total dummy
 scoreboard objectives add mojodice.dice_bag.cooldown dummy
+scoreboard objectives add mojodice.d4 dummy
+scoreboard objectives add mojodice.d6 dummy
+scoreboard objectives add mojodice.d8 dummy
+scoreboard objectives add mojodice.d10 dummy
+scoreboard objectives add mojodice.d12 dummy
+scoreboard objectives add mojodice.d20 dummy
+scoreboard objectives add mojodice.modifier dummy
+advancement revoke @a only mojodice:right_click/stick

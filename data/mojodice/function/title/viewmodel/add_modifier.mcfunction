@@ -1,0 +1,3 @@
+execute if predicate mojodice:positive_modifier run data modify storage mojodice:title ViewModel.roll_results append value {"text": " + ", "color": "white"}
+execute if predicate mojodice:negative_modifier run data modify storage mojodice:title ViewModel.roll_results append value {"text": " - ", "color": "white"}
+$execute unless predicate mojodice:no_modifier run data modify storage mojodice:title ViewModel.roll_results append value {"text": "$(absolute_value)", "color": "gold"}

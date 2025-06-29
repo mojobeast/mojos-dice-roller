@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:value_check",
+  "value": {
+    "type": "minecraft:storage",
+    "storage": "mojodice:main",
+    "path": "Model.modifier.value"
+  },
+  "range": {
+    "min": {
+      "type": "minecraft:constant",
+      "value": 1
+    }
+  }
+}

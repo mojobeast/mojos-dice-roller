@@ -1,0 +1,1 @@
+$data modify storage mojodice:title ViewModel.roll_results append value {"text": "$(current_die_result)", "color": "gold"}

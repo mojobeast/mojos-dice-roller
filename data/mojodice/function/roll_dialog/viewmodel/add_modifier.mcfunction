@@ -1,0 +1,3 @@
+execute if predicate mojodice:positive_modifier run data modify storage mojodice:roll_dialog ViewModel.dice_formula_text append value {"text": " + "}
+execute if predicate mojodice:negative_modifier run data modify storage mojodice:roll_dialog ViewModel.dice_formula_text append value {"text": " - "}
+$execute unless predicate mojodice:no_modifier run data modify storage mojodice:roll_dialog ViewModel.dice_formula_text append value {"text": "$(absolute_value)"}
