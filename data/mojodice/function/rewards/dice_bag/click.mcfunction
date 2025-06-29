@@ -1,0 +1,1 @@
+function mojodice:roll_dialog/show
