@@ -11,4 +11,4 @@ scoreboard objectives add mojodice.d10 dummy
 scoreboard objectives add mojodice.d12 dummy
 scoreboard objectives add mojodice.d20 dummy
 scoreboard objectives add mojodice.modifier dummy
-advancement revoke @a only mojodice:right_click/stick
+advancement revoke @a only mojodice:dice_bag/right_click
