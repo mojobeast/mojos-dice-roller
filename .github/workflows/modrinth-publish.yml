@@ -35,6 +35,9 @@ jobs:
       - name: Archive repository as zip file
         run: git archive --format=zip --output=${{ steps.versions.outputs.archive-filename }} HEAD
 
+      - name: Verify that zip file exists
+        run: ls *.zip
+
       - uses: cloudnode-pro/modrinth-publish@v2
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
