@@ -42,3 +42,6 @@ jobs:
           version: ${{ steps.versions.outputs.version }}
           game-versions: |
             ${{ steps.versions.outputs.minecraft-version }}
+          files: |
+            ${{ steps.versions.outputs.archive-filename }}
+          primary-file: ${{ steps.versions.outputs.archive-filename }}
