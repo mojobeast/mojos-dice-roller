@@ -45,3 +45,4 @@ jobs:
           files: |
             ${{ steps.versions.outputs.archive-filename }}
           primary-file: ${{ steps.versions.outputs.archive-filename }}
+          status: draft
