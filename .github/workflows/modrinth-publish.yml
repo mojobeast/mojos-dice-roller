@@ -50,9 +50,9 @@ jobs:
           version: ${{ steps.versions.outputs.version }}
           loaders: |-
             minecraft
-          game-versions: |
+          game-versions: |-
             ${{ steps.versions.outputs.minecraft-version }}
-          files: |
+          files: |-
             ${{ steps.versions.outputs.archive-filename }}
           primary-file: ${{ steps.versions.outputs.archive-filename }}
           status: draft
