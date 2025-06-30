@@ -1,0 +1,21 @@
+name: Publish to Modrinth
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Publish to Modrinth
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Archive repository as zip file
+        run: git archive --format=zip --output=mojos-dice-roller-$(cat version)-mc-$(cat minecraft-version).zip main
