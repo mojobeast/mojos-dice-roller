@@ -18,4 +18,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Archive repository as zip file
-        run: git archive --format=zip --output=mojos-dice-roller-$(cat version)-mc-$(cat minecraft-version).zip main
+        run: git archive --format=zip --output=mojos-dice-roller-$(cat version)-mc-$(cat minecraft-version).zip HEAD
