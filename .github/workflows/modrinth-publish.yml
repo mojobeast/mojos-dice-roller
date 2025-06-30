@@ -42,6 +42,12 @@ jobs:
             echo "File not found"
             exit 1
           fi
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.versions.outputs.archive-filename }} 
+          path: ${{ steps.versions.outputs.archive-filename }}
+          compression-level: 0
 
       - uses: cloudnode-pro/modrinth-publish@v2
         with:
