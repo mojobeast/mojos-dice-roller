@@ -21,6 +21,9 @@ jobs:
         id: versions
         run: |
           VERSION=$(cat version)
+          if [ $GITHUB_EVENT_NAME == 'pull_request' ]; then
+            VERSION=$VERSION-alpha.$GITHUB_RUN_NUMBER
+          fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
           MINECRAFT_VERSION=$(cat minecraft-version)
@@ -29,7 +32,13 @@ jobs:
           ARCHIVE_FILENAME=mojos-dice-roller-$VERSION-mc-$MINECRAFT_VERSION.zip
           echo "archive-filename=$ARCHIVE_FILENAME" >> "$GITHUB_OUTPUT"
 
-          echo $GITHUB_EVENT_NAME # temporary - debug purposes
-
       - name: Archive repository as zip file
         run: git archive --format=zip --output=${{ steps.versions.outputs.archive-filename }} HEAD
+
+      - uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: ${{ secrets.MODRINTH_PROJECT_ID }}
+          version: ${{ steps.versions.outputs.version }}
+          game-versions: |
+            ${{ steps.versions.outputs.minecraft-version }}
