@@ -36,7 +36,12 @@ jobs:
         run: git archive --format=zip --output=${{ steps.versions.outputs.archive-filename }} HEAD
 
       - name: Verify that zip file exists
-        run: ls *.zip
+        run: |
+          if [ ! -f ${{ steps.versions.outputs.archive-filename }} ]
+          then
+            echo "File not found"
+            exit 1
+          fi
 
       - uses: cloudnode-pro/modrinth-publish@v2
         with:
