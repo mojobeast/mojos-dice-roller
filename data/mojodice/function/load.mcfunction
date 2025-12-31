@@ -1,6 +1,8 @@
 scoreboard objectives add dice_bag trigger
 scoreboard objectives add mojodice.event trigger
 scoreboard objectives add mojodice.event.add_die trigger
+scoreboard objectives add mojodice.event.keep_highest trigger
+scoreboard objectives add mojodice.event.keep_lowest trigger
 scoreboard objectives add mojodice.roll_result dummy
 scoreboard objectives add mojodice.total dummy
 scoreboard objectives add mojodice.dice_bag.cooldown dummy
