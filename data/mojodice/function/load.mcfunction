@@ -25,4 +25,5 @@ scoreboard objectives add mojodice.d20 dummy
 scoreboard objectives add mojodice.d20_keep_highest dummy
 scoreboard objectives add mojodice.d20_keep_lowest dummy
 scoreboard objectives add mojodice.modifier dummy
+scoreboard objectives add mojodice.temp_variables dummy
 advancement revoke @a only mojodice:dice_bag/right_click
