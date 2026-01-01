@@ -1,6 +1,6 @@
-$scoreboard players add @s mojodice.d$(event_die_size)_keep_lowest 
+$scoreboard players add @s mojodice.d$(event_die_size)_keep_lowest 1
 
-$execute if score @s mojodice.d$(event_die_size)_keep_lowest >= @s mojodice.d$(die_size) \
+$execute if score @s mojodice.d$(event_die_size)_keep_lowest >= @s mojodice.d$(event_die_size) \
     run scoreboard players set @s mojodice.d$(event_die_size)_keep_lowest 0
 
 $execute if score @s mojodice.d$(event_die_size)_keep_highest matches 1.. \
