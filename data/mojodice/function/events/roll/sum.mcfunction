@@ -1,3 +1,5 @@
+function mojodice:events/roll/keep_loop
+
 data modify storage mojodice:events/roll Temp.results_to_sum \
     set from storage mojodice:events/roll Temp.last_die_set.die_results 
 

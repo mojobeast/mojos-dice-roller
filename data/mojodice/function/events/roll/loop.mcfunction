@@ -7,12 +7,19 @@ $execute unless data storage mojodice:events/roll Temp.last_die_set.count \
 
 $execute store result score @s mojodice.roll_result run random value 1..$(die_size)
 
-data modify storage mojodice:events/roll Temp.last_die_set.die_results \
-    append value {}
+data modify storage mojodice:events/roll Temp.last_die_result \
+    set value {"kept": false}
 
-execute store result storage mojodice:events/roll \
-    Temp.last_die_set.die_results[-1].roll int 1 \
+execute store result storage mojodice:events/roll Temp.last_die_result.roll int 1 \
     run scoreboard players get @s mojodice.roll_result
+
+execute store result storage mojodice:events/roll Temp.last_die_result.index int 1 \
+    run data get storage mojodice:events/roll Temp.last_die_set.die_results
+
+data modify storage mojodice:events/roll Temp.last_die_set.die_results \
+    append from storage mojodice:events/roll Temp.last_die_result
+
+function mojodice:events/roll/keep_or_discard
 
 $scoreboard players remove @s mojodice.d$(die_size) 1
 
