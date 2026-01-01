@@ -3,6 +3,9 @@ execute unless data storage mojodice:title Temp.current_die_set.die_results[0] r
 data modify storage mojodice:title Temp.current_die_result \
     set from storage mojodice:title Temp.current_die_set.die_results[0].roll
 
+data modify storage mojodice:title Temp.current_die_kept \
+    set from storage mojodice:title Temp.current_die_set.die_results[0].kept
+
 data remove storage mojodice:title Temp.current_die_set.die_results[0]
 
 function mojodice:title/viewmodel/add_die_result with storage mojodice:title Temp
