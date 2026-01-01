@@ -4,22 +4,30 @@ $function mojodice:roll_dialog/viewmodel/die_button {"count": "$(d8)", "die_size
 $function mojodice:roll_dialog/viewmodel/die_button {"count": "$(d10)", "die_size": 10}
 $function mojodice:roll_dialog/viewmodel/die_button {"count": "$(d12)", "die_size": 12}
 $function mojodice:roll_dialog/viewmodel/die_button {"count": "$(d20)", "die_size": 20}
+
+function mojodice:roll_dialog/viewmodel/dummy_button
+
 data modify storage mojodice:roll_dialog ViewModel.actions append value {\
-    "label": "Modifier -1",\
+    "label": "-1",\
+    "width": 100,\
     "action": {\
         "type": "run_command",\
         "command": "trigger mojodice.event set 4"\
     }\
 }
+
 data modify storage mojodice:roll_dialog ViewModel.actions append value {\
-    "label": "Modifier +1",\
+    "label": "+1",\
+    "width": 100,\
     "action": {\
         "type": "run_command",\
         "command": "trigger mojodice.event set 3"\
     }\
 }
+
 data modify storage mojodice:roll_dialog ViewModel.actions append value {\
     "label": "Roll!",\
+    "width": 100,\
     "action": {\
         "type": "run_command",\
         "command": "trigger mojodice.event set 1"\
