@@ -1,7 +1,7 @@
 execute unless data storage mojodice:title Temp.current_die_set.die_results[0] run return 0
 
 data modify storage mojodice:title Temp.current_die_result \
-    set from storage mojodice:title Temp.current_die_set.die_results[0]
+    set from storage mojodice:title Temp.current_die_set.die_results[0].roll
 
 data remove storage mojodice:title Temp.current_die_set.die_results[0]
 

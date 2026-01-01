@@ -7,11 +7,12 @@ $execute unless data storage mojodice:events/roll Temp.last_die_set.count \
 
 $execute store result score @s mojodice.roll_result run random value 1..$(die_size)
 
-execute store result storage mojodice:events/roll Temp.last_die_result int 1 \
-    run scoreboard players get @s mojodice.roll_result
-
 data modify storage mojodice:events/roll Temp.last_die_set.die_results \
-    append from storage mojodice:events/roll Temp.last_die_result
+    append value {}
+
+execute store result storage mojodice:events/roll \
+    Temp.last_die_set.die_results[-1].roll int 1 \
+    run scoreboard players get @s mojodice.roll_result
 
 $scoreboard players remove @s mojodice.d$(die_size) 1
 

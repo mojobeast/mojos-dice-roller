@@ -6,7 +6,7 @@ data modify storage mojodice:events/roll Temp.result_to_sum \
 data remove storage mojodice:events/roll Temp.results_to_sum[0]
 
 execute store result score @s mojodice.roll_result \
-    run data get storage mojodice:events/roll Temp.result_to_sum
+    run data get storage mojodice:events/roll Temp.result_to_sum.roll
 
 scoreboard players operation @s mojodice.total += @s mojodice.roll_result
 
