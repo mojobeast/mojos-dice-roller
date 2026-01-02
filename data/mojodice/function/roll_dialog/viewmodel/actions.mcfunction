@@ -61,8 +61,8 @@ data modify storage mojodice:roll_dialog ViewModel.actions append value {\
 }
 
 data modify storage mojodice:roll_dialog ViewModel.actions append value {\
-    "label": "Roll!",\
-    "width": 100,\
+    "label": "🎲 Roll!",\
+    "width": 300,\
     "action": {\
         "type": "run_command",\
         "command": "trigger mojodice.event set 1"\
