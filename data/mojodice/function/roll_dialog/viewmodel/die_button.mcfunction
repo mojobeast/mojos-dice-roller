@@ -14,11 +14,13 @@ $execute if score @s mojodice.d$(die_size) matches 1.. \
 $function mojodice:roll_dialog/viewmodel/keep_dice_button {\
     "die_size": $(die_size),\
     "highest_or_lowest": "highest",\
+    "advantage_or_disadvantge": "advantage",\
     "keep_dice_count": $(keep_highest)\
 }
 
 $function mojodice:roll_dialog/viewmodel/keep_dice_button {\
     "die_size": $(die_size),\
     "highest_or_lowest": "lowest",\
+    "advantage_or_disadvantge": "disadvantage",\
     "keep_dice_count": $(keep_lowest)\
 }
