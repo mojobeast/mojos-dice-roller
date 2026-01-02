@@ -3,8 +3,8 @@ $data modify storage mojodice:roll_dialog ViewModel.dice_formula_text \
 
 $execute unless data storage mojodice:roll_dialog Temp.current_die_set{keep_highest:0} \
     run data modify storage mojodice:roll_dialog ViewModel.dice_formula_text \
-    append value "kh$(keep_highest)"
+    append value "↑$(keep_highest)"
 
 $execute unless data storage mojodice:roll_dialog Temp.current_die_set{keep_lowest:0} \
     run data modify storage mojodice:roll_dialog ViewModel.dice_formula_text \
-    append value "kl$(keep_lowest)"
+    append value "↓$(keep_lowest)"
