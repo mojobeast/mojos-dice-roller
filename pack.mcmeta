@@ -1,6 +1,9 @@
 {
   "pack": {
     "description": "Dice Roller!",
-    "pack_format": 80
+    "pack_format": 107,
+    "min_format": 80,
+    "max_format": 107,
+    "supported_formats": { "min_inclusive": 80, "max_inclusive": 107 }
   }
 }
