@@ -1,1 +1,0 @@
-$data modify storage mojodice:roll_dialog ViewModel.dice_formula_text append value {"text": "$(count)d$(die_size)"}
